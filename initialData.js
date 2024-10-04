@@ -86,7 +86,7 @@ export const initialData = [
     {
         "id": 13,
         "title": "Build Portfolio Projects 🛠️",
-        "description": "Create a portfolio showcasing your skills and projects to potential employers",
+        "description": "Create a portfolio casing your skills and projects to potential employers",
         "status": "doing",
         "board": "Launch Career"
     }

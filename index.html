@@ -8,6 +8,7 @@
     <!-- Page Styling: Links to external CSS for page styling and fonts. -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    
     </style>
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.svg">
@@ -26,14 +27,15 @@
         </div>
         <div class="side-bar-bottom">
             <div class="toggle-div">
-                <img src="./assets/icon-dark-theme.svg" id="icon-dark" alt="icon-dark-theme">
+                <img src="./assets/icon-dark-theme.svg" id="icon-dark" alt="icon--theme">
                 <input type="checkbox" id="switch" />
                 <label for="switch" id="label-checkbox-theme"></label>
                 <img src="./assets/icon-light-theme.svg" id="icon-light" alt="icon-light-theme">
             </div>
             <div class="hide-side-bar-div">
-                <img src="./assets/icon-hide-sidebar.svg" alt="icon-hide-sidebar">
-                <button id="hide-side-bar-btn">Hide Sidebar</button>
+                <button id="hide-side-bar-btn" style="display:block">
+                    <img src="./assets/icon-hide-sidebar.svg" alt="icon-hide-sidebar">Hide Sidebar
+                </button>
             </div>
         </div>
     </nav>
@@ -69,7 +71,10 @@
                         <h4 id="toDoText" class="columnHeader">TODO</h4>
                     </div>
                     <!-- Tasks container for TODO -->
-                    <div class="tasks-container"></div>
+                    <div class="tasks-container"  id="todo-tasks"></div>
+                    
+
+                
                 </div>
                 <!-- DOING Column -->
                 <div class="column-div" data-status="doing">
@@ -79,6 +84,7 @@
                     </div>
                     <!-- Tasks container for DOING -->
                     <div class="tasks-container"></div>
+                   
                 </div>
                 <!-- DONE Column -->
                 <div class="column-div" data-status="done">
@@ -88,14 +94,15 @@
                     </div>
                     <!-- Tasks container for DONE -->
                     <div class="tasks-container"></div>
+                    
                 </div>
             </main>
         </div>
     </div>
 
     <!-- New Task Modal: Form for adding a new task. -->
-    <form class="modal-window" id="new-task-modal-window">
-        <h4 class="modal-title">Add New Task</h4>
+    <form class="modal-window" id="new-task-modal-window" >
+        <h4 class="modal-title"  >Add New Task</h4>
         <div class="input-div">
             <label class="label-modal-window" id="modal-title-input" for="title-input">Title</label>
             <input type="text" class="modal-input" id="title-input" placeholder="e.g. Take a little break">
@@ -145,7 +152,7 @@
     </div>
 
 
-    <div id="filterDiv"></div>
+    <div id="filterDiv" style="display: none;" class="filter-overlay"></div>
 
     <!-- JavaScript Import -->
     <script type="module" src="./index.js"></script>
